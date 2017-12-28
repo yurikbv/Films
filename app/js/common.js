@@ -1,7 +1,5 @@
 $(function() {
-    var api = $('#my-menu');
-    var appMmenu = api.data('mm');
-    api.mmenu({
+    $('#my-menu').mmenu({
         extensions: ['theme-black', "fx-menu-slide","fx-panels-none","fx-listitems-slide", 'pagedim-black'],
         navbar: {
             title: '<img src="img/logo-3min.png" alt="Alien covenant">'
@@ -10,15 +8,17 @@ $(function() {
             position: 'right'
         }
     });
-/*    appMmenu.bind('opened', function () {
+    var api = $("#my-menu").data( "mmenu" );
+    api.bind('open:finish', function () {
         $(".hamburger").addClass('is-active')
-    }).bind('closed', function () {
+    });
+    api.bind('close:finish', function () {
         $(".hamburger").removeClass('is-active')
-    })*/
-    $(".hamburger").on("click", function() {
-        $hamburger.toggleClass("is-active");
+    })
+/*    $(".hamburger").on("click", function() {
+        $(".hamburger").toggleClass("is-active");
     });
     $('#mm-blocker').on('click', function () {
-        $hamburger.removeClass('is-active')
-    })
+        $(".hamburger").removeClass('is-active')
+    })*/
 });

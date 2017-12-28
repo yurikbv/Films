@@ -38,28 +38,74 @@ html, body
 	height: 100%
 
 body
-	font-size: 16px
-	min-width: 320px
-	position: relative
-	line-height: 1.65
-	font-family: $default-font
-	overflow-x: hidden
-	opacity: 1
-	&.ishome
-		.site-header
-			min-height: 500px
-			background: url("../img/bg-2.jpg") $grey
-			color: $white
-			height: 100vh
-			.top-line
-				padding-top: 40px
-				position: absolute
-				width: 100%
-				z-index: 1
+      font-size: 16px
+      min-width: 320px
+      position: relative
+      line-height: 1.65
+      font-family: $default-font
+      overflow-x: hidden
+      opacity: 1
+      &.ishome
+		        .site-header
+                min-height: 500px
+                background: url("../img/bg-2.jpg") $grey no-repeat
+                background-size: cover
+                color: $white
+                height: 100vh
+                .top-line
+                    padding-top: 40px
+                    position: absolute
+                    width: 100%
+                    z-index: 1
+
+.button
+    display: inline-block
+    border: none
+    color: #fff
+    text-decoration: none
+    background-color: $accent
+    padding: 15px 45px
+    font-size: 13px
+    text-transform: uppercase
+    font-weight: 600
+    letter-spacing: 3px
+    border-radius: 2px
+    text-align: center
+    position: relative
+    outline: none
+    transition: background-color .1s ease
+    cursor: pointer
+    &::after
+        transition: background-color .2s ease
+        position: absolute
+        content: ''
+        height: 4px
+        bottom: 0
+        width: 100%
+        background-color: darken($accent, 50%)
+        opacity: .18
+        border-bottom-left-radius: 2px
+        border-bottom-right-radius: 2px
+        left: 0
+    &:focus, &:hover
+        text-decoration: none
+        color: #fff
+    &:hover
+        background-color: lighten($accent, 5%)
+        &::after
+            opacity: .22
+    &:active
+        background-color: darken($accent, 5%)
+        &::after
+            opacity: .32
+
+.h1, .h2, .h3, .h4, .h5, .h6
+    text-transform: uppercase
+    line-height: 1.4
 
 .logo
 	img
-		width: 125px
+		width: 80px
 		margin-left: 45px
 		border-radius: 5px
 		box-shadow: 8px 8px 10px rgba(0,0,0,.8)
@@ -72,7 +118,8 @@ body
 	  font-size: 22px
 	  white-space: nowrap
 	  .fa-mobile
-		    margin-right: 10px
+        margin-right: 10px
+        transform: scale(1.5)
 
 section, header
     position: relative
@@ -96,5 +143,66 @@ section
         width: 34px
         border-radius: 0
         height: 3px
+
+.mm-menu.mm-theme-black
+    li:not(.mm-selected)
+        a:hover
+            color: $white
+            transition: color 0.25s
+    .mm-selected
+        color: $accent
+        font-weight: bold
+
+.flex-header
+    display: flex
+    height: 100%
+    position: relative
+    top: 0
+
+.flex-center
+    margin: auto
+
+.header-composition
+    position: relative
+    text-align: center
+    p
+        margin-top: 20px
+        text-shadow: 5px 5px 3px rgba(0,0,0,.8)
+    img
+        display: block
+        margin: auto
+        max-width: 560px
+    cite
+        display: block
+        margin: 10px 0 20px
+
+
+.welcome
+    border-bottom: 1px solid $white
+    p
+        font-size: 14px
+        text-transform: uppercase
+        display: flex
+        align-items: center
+        white-space: nowrap
+        margin: 0
+        span
+            margin: 0 10px
+        &::before, &::after
+            content: ''
+            height: 1px
+            width: 100%
+            position: relative
+            background-color: $white
+            display: inline-block
+    strong
+        margin: 10px 0 10px
+        display: block
+        font-size: 17px
+        text-transform: uppercase
+    .fa
+        margin: 0 10px
+        color: #555555
+
 
 @import "media" // Всегда в конце
