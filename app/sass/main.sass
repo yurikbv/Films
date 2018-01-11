@@ -37,27 +37,6 @@ body textarea:required:valid
 html, body
 	height: 100%
 
-body
-      font-size: 16px
-      min-width: 320px
-      position: relative
-      line-height: 1.65
-      font-family: $default-font
-      overflow-x: hidden
-      opacity: 1
-      &.ishome
-		        .site-header
-                min-height: 500px
-                background: url("../img/bg-2.jpg") $grey no-repeat
-                background-size: cover
-                color: $white
-                height: 100vh
-                .top-line
-                    padding-top: 40px
-                    position: absolute
-                    width: 100%
-                    z-index: 1
-
 .button
     display: inline-block
     border: none
@@ -99,20 +78,40 @@ body
         &::after
             opacity: .32
 
+body
+      font-size: 16px
+      min-width: 320px
+      position: relative
+      line-height: 1.65
+      font-family: $default-font
+      overflow-x: hidden
+      opacity: 1
+      &.ishome
+		        .site-header
+                min-height: 500px
+                background: url("../img/bg-2.jpg") $grey no-repeat
+                background-size: cover
+                color: $white
+                height: 100vh
+                .top-line
+                    padding-top: 40px
+                    position: absolute
+                    width: 100%
+                    z-index: 1
+
 .h1, .h2, .h3, .h4, .h5, .h6
     text-transform: uppercase
     line-height: 1.4
 
 .logo
 	img
-		width: 80px
-		margin-left: 45px
+		width: 60px
+		margin: -15px 0 0 25px
 		border-radius: 5px
 		box-shadow: 8px 8px 10px rgba(0,0,0,.8)
-
 .phone
 	  position: absolute
-	  right: 85px
+	  right: 95px
 	  top: 44px
 	  font-family: "Fira Sans", sans-serif
 	  font-size: 22px
@@ -136,7 +135,7 @@ section
 
 .hamburger
     position: absolute
-    right: 10px
+    right: 0
     top: 34px
     .hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
         background-color: $white
@@ -203,6 +202,37 @@ section
     .fa
         margin: 0 10px
         color: #555555
+
+.header-socials
+    position: absolute
+    right: 0
+    display: flex
+    flex-direction: column
+    justify-content: center
+    border-left: 1px solid rgba(#fff,0.1)
+    height: 100%
+    top: 0
+    padding: 0 15px
+
+.soc
+    ul , li
+        margin: 0
+        padding: 0
+        list-style-type: none
+    a
+        display: block
+        color: $white
+        font-size: 17px
+        background-color: rgba(#fff,0.2)
+        width: 45px
+        height: 45px
+        text-align: center
+        margin: 18px 0
+        line-height: 45px
+        border-radius: 50%
+        transition: background-color .25s ease
+        &:hover
+            background-color: rgba(#fff,0.5)
 
 
 @import "media" // Всегда в конце
