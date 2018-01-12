@@ -234,5 +234,10 @@ section
         &:hover
             background-color: rgba(#fff,0.5)
 
+$colors: $accent,$white, #ffd97e
+@for $i from 1 through length($colors)
+    .carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
+        background-color: nth($colors,$i)
+
 
 @import "media" // Всегда в конце
