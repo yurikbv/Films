@@ -15,9 +15,22 @@ $(function() {
     api.bind('close:finish', function () {
         $(".hamburger").removeClass('is-active')
     });
+
+
     $('.carousel-services').owlCarousel({
       loop: true,
       nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      },
       smartSpeed: 700,
       navText: ['<i class="fa fa-angle-double-left"></i>','<i class="fa fa-angle-double-right"></i>']
     });
