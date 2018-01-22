@@ -30,6 +30,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/jQuery.mmenu/dist/jquery.mmenu.all.js',
     'app/libs/OwlCarousel2-2.2.1/owl.carousel.min.js',
+		'app/libs/fotorama/fotorama.js',
 		'app/js/common.min.js' // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
@@ -68,7 +69,17 @@ gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
-	.pipe(cache(imagemin())) // Cache Images
+	.pipe(cache(imagemin([
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.jpegtran({progressive: true}),
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.svgo({
+      plugins: [
+        {removeViewBox: true},
+        {cleanupIDs: false}
+      ]
+    })
+  ]))) // Cache Images
 	.pipe(gulp.dest('dist/img')); 
 });
 

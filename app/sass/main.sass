@@ -239,7 +239,31 @@ $colors: $accent,$white, #ffd97e
     .carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
         background-color: nth($colors,$i)
 
-.carousel-services-item
-    background-color: #000
+//.owl-stage
+//    display: flex
+
+.owl-carousel .owl-item img
+    height: 350px
+    cursor: pointer
+
+.owl-carousel
+    position: relative
+    .owl-nav
+        color: #fff
+        .owl-prev,.owl-next
+            position: absolute
+            top: 0
+            bottom: 0
+            text-align: center
+            width: 30px
+            background-color: rgba($dark, .8)
+            .fa-angle-double-left,.fa-angle-double-right
+                position: absolute
+                top: 50%
+                transform: translate(-50%,-50%)
+        .owl-prev
+            left: 0
+        .owl-next
+            right: 0
 
 @import "media" // Всегда в конце
