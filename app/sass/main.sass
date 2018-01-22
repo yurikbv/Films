@@ -103,12 +103,13 @@ body
     text-transform: uppercase
     line-height: 1.4
 
-.logo
-	img
-		width: 60px
-		margin: -15px 0 0 25px
-		border-radius: 5px
-		box-shadow: 8px 8px 10px rgba(0,0,0,.8)
+//.logo
+//	img
+//		width: 60px
+//		margin: -15px 0 0 25px
+//		border-radius: 5px
+//		box-shadow: 8px 8px 10px rgba(0,0,0,.8)
+
 .phone
 	  position: absolute
 	  right: 95px
@@ -234,7 +235,7 @@ section
         &:hover
             background-color: rgba(#fff,0.5)
 
-$colors: $accent,$white, #ffd97e
+$colors: $accent,$white, $orange
 @for $i from 1 through length($colors)
     .carousel-services .owl-item:nth-child(#{length($colors)}n+#{$i})
         background-color: nth($colors,$i)
@@ -242,11 +243,11 @@ $colors: $accent,$white, #ffd97e
 //.owl-stage
 //    display: flex
 
-.owl-carousel .owl-item img
+.s-services .owl-carousel .owl-item img
     height: 350px
     cursor: pointer
 
-.owl-carousel
+.s-services .owl-carousel
     position: relative
     .owl-nav
         color: #fff
@@ -266,4 +267,27 @@ $colors: $accent,$white, #ffd97e
         .owl-next
             right: 0
 
+.s-about-film
+    .overlay
+        display: flex
+        justify-content: space-around
+        align-items: center
+        color: white
+        text-align: center
+        background-color: rgba($dark, .8)
+        h2
+            color: $orange
+            font-weight: 800
+            span
+                color: #fff
+.about-film
+    flex-basis: 500px
+
+.fotorama
+    padding: 40px 0
+
+.fotorama__arr--prev
+    background-image: url('../img/photos/small/ab0cea2271373ccb07e5fae0eba42a67.svg')
+
+    
 @import "media" // Всегда в конце

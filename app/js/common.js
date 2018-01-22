@@ -21,7 +21,7 @@ $(function() {
       loop: true,
       nav: true,
       dots: false,
-    stagePadding: 20,
+    // stagePadding: 20,
     responsive: {
         0: {
           items: 1
@@ -40,4 +40,22 @@ $(function() {
     owl.trigger('next.owl');
     e.preventDefault();
   });
+
+  $('.fotorama').fotorama({
+    width: 600,
+    maxwidth: '100%',
+    ratio: 16/9,
+    allowfullscreen: 'native',
+    nav: 'thumbs',
+    thumbwidth: 110,
+    thumbheight: 70,
+    arrows: 'always',
+    thumbborderwidth: 2,
+    loop: true
+  });
+
+  $('section .h2').each(function () {
+    var ths = $(this);
+    ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
+  })
 });
