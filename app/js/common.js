@@ -37,7 +37,11 @@ $(function() {
       navText: ['<i class="fa fa-angle-double-left"></i>','<i class="fa fa-angle-double-right"></i>']
     });
   owl.on('mousewheel', '.owl-stage', function (e) {
-    owl.trigger('next.owl');
+    if (e.deltaY>0) {
+      owl.trigger('next.owl');
+    } else {
+      owl.trigger('prev.owl');
+    }
     e.preventDefault();
   });
 
