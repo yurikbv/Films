@@ -24,13 +24,19 @@ $(function() {
     // stagePadding: 20,
     responsive: {
         0: {
-          items: 1
+          items: 2
+        },
+        480: {
+          items: 3
         },
         600: {
-          items: 3
+          items: 4
         },
         1000: {
           items: 5
+        },
+        1600: {
+          items: 8
         }
       },
       smartSpeed: 700,
@@ -46,8 +52,9 @@ $(function() {
   });
 
   $('.fotorama').fotorama({
-    width: 600,
-    maxwidth: '100%',
+    width: '100%',
+    height: 'auto',
+    // maxwidth: '100%',
     ratio: 16/9,
     allowfullscreen: 'native',
     nav: 'thumbs',

@@ -270,6 +270,7 @@ $colors: $accent,$white, $orange
     .overlay
         display: flex
         justify-content: space-around
+        flex-wrap: wrap
         align-items: center
         color: white
         text-align: center
@@ -280,10 +281,12 @@ $colors: $accent,$white, $orange
             span
                 color: #fff
 .about-film
+    padding: 0 15px
     flex-basis: 500px
 
 .fotorama
     padding: 40px 0
+    flex-basis: 600px
 
 .fotorama__arr--prev
     background: url("../img/photos/small/30d48090373dda4c05e2a1390c0b81303.svg") 0 0
@@ -296,5 +299,39 @@ $colors: $accent,$white, $orange
 
 .fotorama--fullscreen .fotorama__fullscreen-icon
     background: url("../img/photos/small/e4698afd04f9c7bc60caaa22386a4f79.svg")
+
+.more-information
+    display: flex
+    justify-content: space-around
+    background-color: $white
+    padding: 10px
+
+.more-information__poster
+    flex-basis: 300px
+    box-shadow: 3px 3px 5px rgba($dark,.5)
+    border-radius: 5px
+    img
+        max-width: 100%
+        border-radius: 5px
+
+.more-information__info
+    flex-basis: 700px
+    padding: 20px 0
+    p
+        font-size: 14px
+        border-bottom: 1px dotted $dark
+        font-weight: 700
+        text-shadow: 3px 3px 5px rgba($dark,.5)
+    span
+        display: inline-block
+        width: 150px
+        font-weight: 800
+        color: #fe761c
+        text-shadow: 3px 3px 5px rgba(#fe761c,.5)
+        &:first-letter
+            text-transform: uppercase
+    i
+        width: 50px
+        color: #fe761c
 
 @import "media" // Всегда в конце
