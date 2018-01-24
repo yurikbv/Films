@@ -86,29 +86,22 @@ body
       font-family: $default-font
       overflow-x: hidden
       opacity: 1
-      &.ishome
-		        .site-header
-                min-height: 500px
-                background: url("../img/bg-2.jpg") $grey no-repeat
-                background-size: cover
-                color: $white
-                height: 100vh
-                .top-line
-                    padding-top: 40px
-                    position: absolute
-                    width: 100%
-                    z-index: 1
+.ishome
+    .site-header
+        min-height: 500px
+        background: url("../img/bg-2.jpg") $grey no-repeat
+        background-size: cover
+        color: $white
+        height: 100vh
+    .top-line
+        padding-top: 40px
+        position: absolute
+        width: 100%
+        z-index: 1
 
 .h1, .h2, .h3, .h4, .h5, .h6
     text-transform: uppercase
     line-height: 1.4
-
-//.logo
-//	img
-//		width: 60px
-//		margin: -15px 0 0 25px
-//		border-radius: 5px
-//		box-shadow: 8px 8px 10px rgba(0,0,0,.8)
 
 .phone
 	  position: absolute
@@ -266,6 +259,18 @@ $colors: $accent,$white, $orange
         .owl-next
             right: 0
 
+.carousel-services-item__active
+    position: relative
+
+.carousel-services-item__active::after
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(#000, .9)
+
 .s-about-film
     .overlay
         display: flex
@@ -301,10 +306,13 @@ $colors: $accent,$white, $orange
     background: url("../img/photos/small/e4698afd04f9c7bc60caaa22386a4f79.svg")
 
 .more-information
-    display: flex
-    justify-content: space-around
-    background-color: $white
-    padding: 10px
+    background: url("../img/bg-4.jpg") center bottom no-repeat
+    .wrapper
+        display: flex
+        justify-content: space-around
+        align-items: center
+        padding: 10px
+        background-color: rgba($white, .8)
 
 .more-information__poster
     flex-basis: 300px
@@ -315,7 +323,7 @@ $colors: $accent,$white, $orange
         border-radius: 5px
 
 .more-information__info
-    flex-basis: 700px
+    flex-basis: 650px
     padding: 20px 0
     p
         font-size: 14px
@@ -334,4 +342,41 @@ $colors: $accent,$white, $orange
         width: 50px
         color: #fe761c
 
+.s-call
+    .success
+        display: none
+    text-align: center
+    background: url("../img/bg-7.jpg") center bottom no-repeat fixed
+    background-size: cover
+    .wrapper
+        padding: 25px 15px
+        background-color: rgba($dark, .8)
+    .callback
+        max-width: 500px
+        margin: 0 auto
+        p
+            margin: 0 0 15px
+            padding: 0
+            color: $white
+        input,textarea
+            border: none
+            width: 100%
+            display: block
+            border-radius: 3px
+            font-size: 13px
+            line-height: 18px
+            padding: 8px 10px
+        textarea
+            margin: 2px 0 20px
+        input
+            margin-bottom: 10px
+    .form-head
+        font-size: 24px
+        color: $orange
+        font-weight: 800
+        span
+            color: white
+.selectize-input,.selectize-dropdown-content
+        text-align: left
+            
 @import "media" // Всегда в конце

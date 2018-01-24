@@ -21,7 +21,7 @@ $(function() {
       loop: true,
       nav: true,
       dots: false,
-    // stagePadding: 20,
+    lazyLoad: true,
     responsive: {
         0: {
           items: 2
@@ -42,14 +42,14 @@ $(function() {
       smartSpeed: 700,
       navText: ['<i class="fa fa-angle-double-left"></i>','<i class="fa fa-angle-double-right"></i>']
     });
-  owl.on('mousewheel', '.owl-stage', function (e) {
+/*  owl.on('mousewheel', '.owl-stage', function (e) {
     if (e.deltaY>0) {
       owl.trigger('next.owl');
     } else {
       owl.trigger('prev.owl');
     }
     e.preventDefault();
-  });
+  });*/
 
   $('.fotorama').fotorama({
     width: '100%',
@@ -68,5 +68,8 @@ $(function() {
   $('section .h2').each(function () {
     var ths = $(this);
     ths.html(ths.html().replace(/^(\S+)/, '<span>$1</span>'));
+  });
+  $('select').selectize({
+    create: true
   })
 });

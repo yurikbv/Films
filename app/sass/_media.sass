@@ -1,35 +1,67 @@
 @import "vars"
 
 /*==========  Desktop First  ==========*/
-
+@media (min-resolution: 1.5dppx),(min-resolution: 144dpi)
+    .ishome
+        .site-header
+            background: url("../img/bg-2-4k.jpg")
+            background-size: cover
 
 @media only screen and (max-width : 1200px)
     .header-composition
         img
             max-width: 100%
 
+    .ishome
+        .site-header
+            background: url("../img/bg-2-1200.jpg")
+
 @media only screen and (max-width : 992px)
+
+
     .fotorama
         flex-basis: 800px
     .about-film
         flex-basis: 800px
         .h2
             padding-top: 40px
+    .more-information__info
+        flex-basis: 450px
+        span
+            width: 120px
+        i
+            width: 30px
 
+    .ishome
+        .site-header
+            background: url("../img/bg-2-992.jpg")
 
 @media only screen and (max-width : 768px)
     body
         &.ishome
             .site-header
                 min-height: 580px
+                background: url("../img/bg-2-768.jpg")
     .welcome
         padding-top: 20px
+    .more-information
+        .wrapper
+            flex-wrap: wrap
+    .more-information__info
+        font-size: 10px
+        flex-basis: 400px
+        span
+            width: 80px
+    .more-information__poster
+        flex-basis: 250px
+
+
 
 @media only screen and (max-width : 480px)
     .welcome
         padding-top: 60px
         strong
-            font-size: 14px
+            font-size: 12px
         p
             span
                 font-size: 12px
@@ -54,3 +86,6 @@
         p
             font-size: 14px
 
+    .ishome
+        .site-header
+            background: url("../img/bg-2-480.jpg")
