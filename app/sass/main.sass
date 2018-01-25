@@ -343,8 +343,6 @@ $colors: $accent,$white, $orange
         color: #fe761c
 
 .s-call
-    .success
-        display: none
     text-align: center
     background: url("../img/bg-7.jpg") center bottom no-repeat fixed
     background-size: cover
@@ -352,6 +350,7 @@ $colors: $accent,$white, $orange
         padding: 25px 15px
         background-color: rgba($dark, .8)
     .callback
+        position: relative
         max-width: 500px
         margin: 0 auto
         p
@@ -370,6 +369,26 @@ $colors: $accent,$white, $orange
             margin: 2px 0 20px
         input
             margin-bottom: 10px
+        .success
+            display: none
+            position: absolute
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+            text-transform: uppercase
+            font-weight: 700
+            font-size: 14px
+            color: $white
+            z-index: 10
+            span
+                margin: auto
+            & ~ *
+                transition: all .5s ease
+            &.active
+                & ~ *
+                    opacity: .3
+                    filter: blur(10px)
     .form-head
         font-size: 24px
         color: $orange
