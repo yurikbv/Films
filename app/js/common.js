@@ -16,12 +16,11 @@ $(function() {
         $(".hamburger").removeClass('is-active')
     });
 
-  var owl = $('.owl-carousel');
+  var owl = $('.s-services .owl-carousel');
   owl.owlCarousel({
       loop: true,
       nav: true,
       dots: false,
-    lazyLoad: true,
     responsive: {
         0: {
           items: 2
@@ -74,7 +73,16 @@ $(function() {
     create: true
   });
 
-  //E-mail Ajax Send
+  $('.facts').owlCarousel({
+    loop: true,
+    items: 1,
+    smartSpeed: 700,
+    nav: false,
+    dots: true,
+    autoHeight: true
+  });
+
+  //E-mail Ajax Sendn
   $("form.callback").submit(function() { //Change
     var th = $(this);
     $.ajax({

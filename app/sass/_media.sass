@@ -4,7 +4,7 @@
 @media (min-resolution: 1.5dppx),(min-resolution: 144dpi)
     .ishome
         .site-header
-            background: url("../img/bg-2-4k.jpg")
+            background: url("../img/bg-2-4k.jpg") no-repeat
             background-size: cover
 
 @media only screen and (max-width : 1200px)
@@ -14,8 +14,8 @@
 
     .ishome
         .site-header
-            background: url("../img/bg-2-1200.jpg")
-
+            background: url("../img/bg-2-1200.jpg") no-repeat
+            background-size: cover
 @media only screen and (max-width : 992px)
 
 
@@ -35,13 +35,13 @@
     .ishome
         .site-header
             background: url("../img/bg-2-992.jpg")
-
+            background-size: cover
 @media only screen and (max-width : 768px)
-    body
-        &.ishome
-            .site-header
-                min-height: 580px
-                background: url("../img/bg-2-768.jpg")
+    &.ishome
+        .site-header
+            min-height: 580px
+            background: url("../img/bg-2-768.jpg")
+            background-size: cover
     .welcome
         padding-top: 20px
     .more-information
@@ -55,7 +55,9 @@
     .more-information__poster
         flex-basis: 250px
 
-
+    .s-call
+        .wrapper
+            padding: 10px
 
 @media only screen and (max-width : 480px)
     .welcome
@@ -85,7 +87,3 @@
             padding-top: 20px
         p
             font-size: 14px
-
-    .ishome
-        .site-header
-            background: url("../img/bg-2-480.jpg")
