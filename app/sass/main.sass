@@ -43,12 +43,12 @@ html, body
     color: #fff
     text-decoration: none
     background-color: $accent
-    padding: 15px 45px
+    padding: 10px 25px
     font-size: 13px
     text-transform: uppercase
-    font-weight: 600
+    font-weight: 700
     letter-spacing: 3px
-    border-radius: 2px
+    border-radius: 5px
     text-align: center
     position: relative
     outline: none
@@ -106,13 +106,19 @@ body
 .phone
 	  position: absolute
 	  right: 95px
-	  top: 44px
+	  top: 47px
 	  font-family: "Fira Sans", sans-serif
-	  font-size: 22px
+	  font-size: 18px
 	  white-space: nowrap
-	  .fa-mobile
+	  .fa-globe
         margin-right: 10px
         transform: scale(1.5)
+.phone
+    a
+        text-transform: uppercase
+        text-decoration: none
+        color: $white
+        font-weight: 700
 
 section, header
     position: relative
@@ -168,6 +174,8 @@ section
     cite
         display: block
         margin: 10px 0 20px
+    .button
+        margin-top: 30px
 
 
 .welcome
@@ -445,5 +453,46 @@ $colors: $accent,$white, $orange
             &.active
                 background-color: $orange
                 transform: scale(1.2)
+
+.s-starring
+    background: url("../img/bg-4.jpg") center bottom no-repeat
+    .s-starring-wrapper
+        font-size: 14px
+        padding: 40px 15px 40px
+        background-color: rgba($white, .8)
+        .starring
+          max-width: 1000px
+          margin: 0 auto
+          text-align: center
+        .h2
+            font-size: 24px
+            font-weight: 800
+            color: $grey
+            text-align: center
+            margin-bottom: 25px
+            span
+                color: $orange
+                font-weight: 800
+                display: inline-block
+        span
+            display: block
+            margin-top: 10px
+            font-weight: 700
+        img
+          box-shadow: 1px 1px 3px $dark
+          max-width: 100%
+    .owl-nav
+        font-weight: 800
+        color: $accent
+        text-transform: uppercase
+    .owl-prev,.owl-next
+        display: inline-block
+        margin: 0 20px
+        transition: opacity .5s ease
+    .owl-prev:hover,.owl-next:hover
+        opacity: .6
+
+
+
 
 @import "media" // Всегда в конце

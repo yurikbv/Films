@@ -82,6 +82,37 @@ $(function() {
     autoHeight: true
   });
 
+  $('.starring').owlCarousel({
+    loop: true,
+    nav:true,
+    dots:false,
+    smartSpeed: 700,
+    margin: 10,
+    responsive: {
+      0: {
+        items: 3
+      },
+      480: {
+        items: 4
+      },
+      600: {
+        items: 4,
+        margin: 50
+      },
+      768: {
+        items: 5,
+        margin: 75
+      },
+      1000: {
+        items: 6,
+        margin:100
+      },
+      1600: {
+        items: 8
+      }
+    }
+  });
+
   //E-mail Ajax Sendn
   $("form.callback").submit(function() { //Change
     var th = $(this);
