@@ -113,6 +113,16 @@ $(function() {
     }
   });
 
+  $(window).scroll(function () {
+    if($(this).scrollTop() > $(this).height()){
+      $('.go-up').addClass('active');
+    } else $('.go-up').removeClass('active');
+  });
+  $('.go-up').click(function () {
+    $('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+  });
+
+
   //E-mail Ajax Sendn
   $("form.callback").submit(function() { //Change
     var th = $(this);
