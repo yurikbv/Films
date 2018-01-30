@@ -21,6 +21,7 @@
 </head>
 
 <body class="ishome ishome-alien-covenant">
+<div class="preloaded"><div class="pulse"></div></div>
 <div id="my-page">
     <header class="site-header">
         <div class="top-line">
@@ -76,7 +77,7 @@
         </div>
     </header>
 	<div id="my-content">
-        <section class="s-about-film" style="background-image: url(img/bg-6.jpg); background-position: center center ;background-attachment: fixed">
+        <section class="s-about-film" style="background: url(img/bg-6.jpg) center center fixed">
             <div class="overlay">
                 <div class="about-film">
                     <h2 class="h2">Описание фильма</h2>
@@ -89,29 +90,34 @@
                     </p>
                 </div>
                 <div class="fotorama">
-                    <img src="img/photos/photo1.jpg" alt="">
-                    <img src="img/photos/photo2.jpg" alt="">
-                    <img src="img/photos/photo3.jpg" alt="">
-                    <img src="img/photos/photo4.jpg" alt="">
-                    <img src="img/photos/photo5.jpg" alt="">
-                    <img src="img/photos/photo6.jpg" alt="">
-                    <img src="img/photos/photo7.jpg" alt="">
-                    <img src="img/photos/photo8.jpg" alt="">
-                    <img src="img/photos/photo9.jpg" alt="">
-                    <img src="img/photos/photo10.jpg" alt="">
-                    <img src="img/photos/photo11.jpg" alt="">
-                    <img src="img/photos/photo12.jpg" alt="">
-                    <img src="img/photos/photo13.jpg" alt="">
-                    <img src="img/photos/photo14.jpg" alt="">
-                    <img src="img/photos/photo15.jpg" alt="">
-                    <img src="img/photos/photo16.jpg" alt="">
+                    <a href="img/photos/photo1.jpg"><img src="img/photos/small/photo1.jpg"></a>
+                    <a href="img/photos/photo2.jpg"><img src="img/photos/small/photo2.jpg"></a>
+                    <a href="img/photos/photo3.jpg"><img src="img/photos/small/photo3.jpg"></a>
+                    <a href="img/photos/photo4.jpg"><img src="img/photos/small/photo4.jpg"></a>
+                    <a href="img/photos/photo5.jpg"><img src="img/photos/small/photo5.jpg"></a>
+                    <a href="img/photos/photo6.jpg"><img src="img/photos/small/photo6.jpg"></a>
+                    <a href="img/photos/photo7.jpg"><img src="img/photos/small/photo7.jpg"></a>
+                    <a href="img/photos/photo8.jpg"><img src="img/photos/small/photo8.jpg"></a>
+                    <a href="img/photos/photo9.jpg"><img src="img/photos/small/photo9.jpg"></a>
+                    <a href="img/photos/photo10.jpg"><img src="img/photos/small/photo10.jpg"></a>
+                    <a href="img/photos/photo11.jpg"><img src="img/photos/small/photo11.jpg"></a>
+                    <a href="img/photos/photo12.jpg"><img src="img/photos/small/photo12.jpg"></a>
+                    <a href="img/photos/photo13.jpg"><img src="img/photos/small/photo13.jpg"></a>
+                    <a href="img/photos/photo14.jpg"><img src="img/photos/small/photo14.jpg"></a>
+                    <a href="img/photos/photo15.jpg"><img src="img/photos/small/photo15.jpg"></a>
+                    <a href="img/photos/photo16.jpg"><img src="img/photos/small/photo16.jpg"></a>
                 </div>
             </div>
         </section>
         
         <section class="more-information">
             <div class="wrapper">
-                <div class="more-information__poster"><img src="img/poster3IKAR3AoOBPNomSu4tbSf7S3K9E.jpg" alt=""></div>
+                <div class="more-information__poster">
+                  <picture>
+                    <img src="img/poster3IKAR3AoOBPNomSu4tbSf7S3K9E-500.jpg"
+                         srcset="img/poster3IKAR3AoOBPNomSu4tbSf7S3K9E.jpg 2x" alt="">
+                  </picture>
+                </div>
                 <div class="more-information__info">
                     <p><i class="fa fa-film" aria-hidden="true"></i><span>год</span>2017</p>
                     <p><i class="fa fa-film" aria-hidden="true"></i><span>страна</span>США, Великобритания</p>
@@ -169,7 +175,7 @@
                     <p><img src="img/actors/Katherine%20Waterston1109750.jpg" alt=""><span>Katherine Waterston</span></p>
                     <p><img src="img/actors/Billy%20Crudup2668.jpg" alt=""><span>Billy Crudup</span></p>
                     <p><img src="img/actors/Danny%20McBride34783.jpg" alt=""><span>Danny McBrid</span></p>
-                    <p><img src="img/actors/Demián%20Bichir81325.jpg" alt=""><span>Demián Bichir</span></p>
+                    <p><img src="img/actors/Demian%20Bichir.jpg" alt=""><span>Demián Bichir</span></p>
                     <p><img src="img/actors/Carmen%20Ejogo1388.jpg" alt=""><span>Carmen Ejogo</span></p>
                     <p><img src="img/actors/Jussie%20Smollett102046.jpg" alt=""><span>Jussie Smollett</span></p>
                     <p><img src="img/actors/Callie%20Hernandez3152877.jpg" alt=""><span>Callie Hernandez</span></p>
@@ -203,7 +209,7 @@
                         <p>Также можно написать мне для связи.</p>
                         <input type="text" name="Name" placeholder="Ваше Имя..." required>
                         <input type="email" name="" placeholder="Ваш email..." required>
-                        <select name="Что делать">
+                        <select name="Что делать" title="Что делать">
                             <option>Отправить отзыв</option>
                             <option>Написать мне на почту</option>
                         </select>
@@ -215,33 +221,33 @@
         
         <section class="s-services">
             <div class="owl-carousel carousel-services">
-                <div class="carousel-services-item"><img src="img/apes/819281.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/artur/824437.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/baby/kinopoisk.ru-Baby-Driver-3058037.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/carriban/575180.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/Dunkirk/931677.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/fastandfurius/894027.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/galaxy/kinopoisk.ru-Guardians-of-the-Galaxy-Vol-2-2908103.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/ghost/kinopoisk.ru-Ghost-in-the-Shell-2905263.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/greatwall/611822.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/it/453397.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/jumanji/kinopoisk.ru-Jumanji_3A-Welcome-to-the-Jungle-3071416.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/jurassic/924311.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/kingsman/906654.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/kong/kinopoisk.ru-Kong_3A-Skull-Island-2844203.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/League/424994.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/logan/807682.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/mummy/677638.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/runner/kinopoisk.ru-Blade-Runner-2049-2945173.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/Skyline2/569055.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/starwars/718223.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/tor/822709.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/tower/641780.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/transformers/811609.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/valerian/689960.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/west-express/817969.jpg" alt=""></div>
-                <div class="carousel-services-item"><img src="img/wonder/102383.jpg" alt=""></div>
-                <div class="carousel-services-item carousel-services-item__active"><img src="img/poster3IKAR3AoOBPNomSu4tbSf7S3K9E.jpg" alt=""></div>
+                <div class="carousel-services-item"><img src="img/apes/819281-250.jpg" srcset="img/apes/819281-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/artur/824437-250.jpg" srcset="img/artur/824437-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/baby/kinopoisk.ru-Baby-Driver-3058037-250.jpg" srcset="img/baby/kinopoisk.ru-Baby-Driver-3058037-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/carriban/575180-250.jpg" srcset="img/carriban/575180-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/Dunkirk/931677-250.jpg" srcset="img/Dunkirk/931677-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/fastandfurius/894027-250.jpg" srcset="img/fastandfurius/894027-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/galaxy/kinopoisk.ru-Guardians-of-the-Galaxy-Vol-2-2908103-250.jpg" srcset="img/galaxy/kinopoisk.ru-Guardians-of-the-Galaxy-Vol-2-2908103-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/ghost/kinopoisk.ru-Ghost-in-the-Shell-2905263-250.jpg" srcset="img/ghost/kinopoisk.ru-Ghost-in-the-Shell-2905263-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/greatwall/611822-250.jpg" srcset="img/greatwall/611822-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/it/453397-250.jpg" srcset="img/it/453397-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/jumanji/kinopoisk.ru-Jumanji_3A-Welcome-to-the-Jungle-3071416-250.jpg" srcset="img/jumanji/kinopoisk.ru-Jumanji_3A-Welcome-to-the-Jungle-3071416-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/jurassic/924311-250.jpg" srcset="img/jurassic/924311-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/kingsman/906654-250.jpg" srcset="img/kingsman/906654-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/kong/kinopoisk.ru-Kong_3A-Skull-Island-2844203-250.jpg" srcset="img/kong/kinopoisk.ru-Kong_3A-Skull-Island-2844203-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/League/424994-250.jpg" srcset="img/League/424994-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/logan/807682-250.jpg" srcset="img/logan/807682-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/mummy/677638-250.jpg" srcset="img/mummy/677638-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/runner/kinopoisk.ru-Blade-Runner-2049-2945173-250.jpg" srcset="img/runner/kinopoisk.ru-Blade-Runner-2049-2945173-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/Skyline2/569055-250.jpg" srcset="img/Skyline2/569055-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/starwars/718223-250.jpg" srcset="img/starwars/718223-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/tor/822709-250.jpg" srcset="img/tor/822709-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/tower/641780-250.jpg" srcset="img/tower/641780-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/transformers/811609-250.jpg" srcset="img/transformers/811609-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/valerian/689960-250.jpg" srcset="img/valerian/689960-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/west-express/817969-250.jpg" srcset="img/west-express/817969-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item"><img src="img/wonder/102383-250.jpg" srcset="img/wonder/102383-500.jpg 2x" alt=""></div>
+                <div class="carousel-services-item carousel-services-item__active"><img src="img/poster3IKAR3AoOBPNomSu4tbSf7S3K9E-250.jpg" srcset="img/poster3IKAR3AoOBPNomSu4tbSf7S3K9E-500.jpg 2x" alt=""></div>
             </div>
         </section>
     </div>

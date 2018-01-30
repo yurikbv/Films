@@ -41,19 +41,10 @@ $(function() {
       smartSpeed: 700,
       navText: ['<i class="fa fa-angle-double-left"></i>','<i class="fa fa-angle-double-right"></i>']
     });
-/*  owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY>0) {
-      owl.trigger('next.owl');
-    } else {
-      owl.trigger('prev.owl');
-    }
-    e.preventDefault();
-  });*/
 
   $('.fotorama').fotorama({
     width: '100%',
     height: 'auto',
-    // maxwidth: '100%',
     ratio: 16/9,
     allowfullscreen: 'native',
     nav: 'thumbs',
@@ -139,4 +130,7 @@ $(function() {
     });
     return false;
   });
+});
+$(window).on('load',function () {
+  $('.preloaded').delay(1000).fadeOut('slow');
 });

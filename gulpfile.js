@@ -70,17 +70,7 @@ gulp.task('watch', ['sass', 'js', 'browser-sync'], function() {
 
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
-	.pipe(cache(imagemin([
-    imagemin.optipng({optimizationLevel: 5}),
-    imagemin.jpegtran({progressive: true}),
-    imagemin.gifsicle({interlaced: true}),
-    imagemin.svgo({
-      plugins: [
-        {removeViewBox: true},
-        {cleanupIDs: false}
-      ]
-    })
-  ]))) // Cache Images
+	.pipe(cache(imagemin())) // Cache Images
 	.pipe(gulp.dest('dist/img')); 
 });
 
@@ -103,14 +93,17 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 		'app/fonts/**/*'
 		]).pipe(gulp.dest('dist/fonts'));
 
+	var buildVideo = gulp.src([
+			'app/video/**/*'
+	]).pipe(gulp.dest('dist/video'))
 });
 
 gulp.task('deploy', function() {
 
 	var conn = ftp.create({
-		host:      'hostname.com',
-		user:      'username',
-		password:  'userpassword',
+		host:      '',
+		user:      '',
+		password:  '',
 		parallel:  10,
 		log: gutil.log
 	});
@@ -120,7 +113,7 @@ gulp.task('deploy', function() {
 	'dist/.htaccess'
 	];
 	return gulp.src(globs, {buffer: false})
-	.pipe(conn.dest('/path/to/folder/on/server'));
+	.pipe(conn.dest('/public_html/Films'));
 
 });
 
